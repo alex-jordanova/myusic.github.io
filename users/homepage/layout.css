@@ -142,14 +142,14 @@ html, body {
     opacity: 0.8;
 }
 
-.ad-section {
+.banner {
     width: 85%;
     height: 70px;
     margin-top: 2%;
     margin-bottom: 2%;
 }
 
-.advert {
+.ban {
     width: 85%;
     height: 70px;
     background-color: #f2f2f2;
