@@ -6,7 +6,7 @@
         <link href="layout.css" rel="stylesheet" />
         <link href="music-player.css" rel="stylesheet" />
         <link href="playlist.css" rel="stylesheet" />
-    <script src="music-player.js"></script>
+        <script src="music-player.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 </header>
 
@@ -17,7 +17,7 @@
                         <ul class="navigation">
                                 <li><a href="home.html">Home</a></li>
                                 <li><a href="search.html">Search</a></li>
-                                <li><a href="../../guests/log-in.html">Log Out</a></li>
+                                <li><a href="../../index.html">Log Out</a></li>
                         </ul>
 
                         <div class="playlists-dir">
@@ -224,32 +224,7 @@
                         elem[position].style.display = "none";
                 }
         </script>
-        </div>
-        </div>
 
-        <div class="container">
-                <div id="progress-bar"></div>
-                <div class="content">
-                        <img src="http://cdn.last.fm/flatness/responsive/2/noimage/default_album_300_g4.png"
-                                id="album-cover" />
-                        <span id="song-title">Title</span>
-                        <span id="artist-name">Artist</span>
-
-                        <span id="buttons">
-                                <button id="previous"><img src="img/prev.png" onclick="previous()"
-                                                width="20px" /></button>
-                                <button id="play"><img src="img/play.png" id="playpause" onclick="playPause()"
-                                                width="27px" /></button>
-                                <button id="next"><img src="img/next.png" onclick="next()" width="20px" /></button>
-                        </span>
-
-                        <span id="current-time">
-                                0:00
-                        </span>
-                </div>
-        </div>
-
-        </div>
 </body>
 
 </html>
