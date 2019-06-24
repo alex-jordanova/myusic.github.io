@@ -10,15 +10,17 @@
          <img src="img/logo.png" class="logo"/>
          <form>
              <h1>Register</h1>
-             <div class="input-descriptions">E-mail</div>
-             <input type="text"/>
-             <div class="input-descriptions">Username</div>
-             <input type="text"/>
-             <div class="input-descriptions">Password</div>
-             <input type="password"/>
-             <div class="input-descriptions">Confirm Password</div>
-             <input type="password"/>
-             <input type="submit" value="Enter" />
+             <div class="input-descriptions">E-mail*</div>
+             <input type="text" required />
+             <div class="input-descriptions">Username*</div>
+             <input type="text" required />
+             <div class="message">Username must be 30 symbols max and can contain only letters, digits and "-" and "_".</div>
+             <div class="input-descriptions">Password*</div>
+             <input type="password" required />
+             <div class="message">Password must be at least 6 symbols long.</div>
+             <div class="input-descriptions">Confirm Password*</div>
+             <input type="password" required />
+             <input type="submit" value="Register" />
              <div class="helpful-links">
                     <a href="log-in.html" >Log in</a> | <a href="forgotten.html">Forgotten Password?</a>
              </div>
