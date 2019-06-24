@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html>
+<header>
+        <meta charset="utf-8">
+        <title>PLAYLIST NAME | Playlist</title>
+        <link href="layout.css" rel="stylesheet" />
+        <link href="music-player.css" rel="stylesheet" />
+        <link href="playlist.css" rel="stylesheet" />
+        <script src="music-player.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+</header>
+
+<body>
+        <div class="home">
+                <div class="navigation-bar">
+                        <img src="img/logo.png" id="logo" />
+                        <ul class="navigation">
+                                <li><a href="home.html">Home</a></li>
+                                <li><a href="search.html">Search</a></li>
+                                <li><a href="../../guests/log-in.html">Log Out</a></li>
+                        </ul>
+
+                        <div class="playlists-dir">
+                                <div class="play-title">My Playlists</div>
+                                <a href="playlist.html">playlist 1</a>
+                                <a href="playlist.html">playlist 2</a>
+                                <a href="playlist.html">playlist 3</a>
+                                <button onclick="handleModal('create-new-playlist')" id="myBtn">create a playlist</button>
+
+                        </div>
+
+                </div>
+
+                <div class="page">
+                        <div class="ad-section">
+                                <div class="advert">Advertisement</div>
+                        </div>
+
+                        <div class="content">
+                                <div id="playlist-name">Playlist Name</div>
+                                <div id="playlists">
+                                        <span id="playlist-information">
+                                                <img src="img/playlist.jpg" id="thumbnail"
+                                                        style="align-self: center; display: flexbox;" />
+                                                <div id="song-count">7 songs</div>
+                                                <div id="song-count">Made by Alex</div>
+                                                <a href="#" id="play-playlist">PLAY</a>
+                                        </span>
+
+                                        <script>
+                                                function optionsHandler(x) {
+                                                        x.classList.toggle("change");
+                                                        if (x.getElementsByClassName("dropdown")[0].style.display === "block") {
+                                                                x.getElementsByClassName("dropdown")[0].style.display = "none";
+                                                        } else {
+                                                                x.getElementsByClassName("dropdown")[0].style.display = "block";
+                                                        };
+
+
+
+                                                }
+                                        </script>
+
+                                        <ul id="tracks">
+                                                <li>
+                                                        <span id="track-info">
+                                                                <div id="track-title">Can't Stop</div>
+                                                                <div id="track-artist">Red Hot Chilli Peppers</div>
+                                                        </span>
+
+
+                                                        <div class="track-options" onclick="optionsHandler(this)">
+                                                                <div class="bar1"></div>
+                                                                <div class="bar2"></div>
+                                                                <div class="bar3"></div>
+                                                                <ul class="dropdown">
+                                                                        <li onclick="handleModal('add-track')">Add to
+                                                                                another playlist</li>
+                                                                        <li onclick="deleteSong(0)">Delete from this
+                                                                                playlist</li>
+                                                                </ul>
+                                                        </div>
+
+                                                        <div id="duration">4:29</div>
+                                                </li>
+                                                <li>
+                                                        <span id="track-info">
+                                                                <div id="track-title">ECHO</div>
+                                                                <div id="track-artist"> 丸目千熊（CV:木村昴）</div>
+
+                                                        </span>
+
+                                                        <div class="track-options" onclick="optionsHandler(this)">
+                                                                <div class="bar1"></div>
+                                                                <div class="bar2"></div>
+                                                                <div class="bar3"></div>
+                                                                <ul class="dropdown">
+                                                                        <li>Add to another playlist</li>
+                                                                        <li>Delete from this playlist</li>
+                                                                </ul>
+                                                        </div>
+                                                        <span id="duration">3:52</span>
+                                                </li>
+                                                <li>
+                                                        <span id="track-info">
+                                                                <div id="track-title">Toxic</div>
+                                                                <div id="track-artist">Britney Spears</div>
+                                                        </span>
+
+                                                        <div class="track-options" onclick="optionsHandler(this)">
+                                                                <div class="bar1"></div>
+                                                                <div class="bar2"></div>
+                                                                <div class="bar3"></div>
+                                                                <ul class="dropdown">
+                                                                        <li>Add to another playlist</li>
+                                                                        <li>Delete from this playlist</li>
+                                                                </ul>
+                                                        </div>
+                                                        <span id="duration">3:32</span>
+                                                </li>
+                                                <li>
+                                                        <span id="track-info">
+                                                                <div id="track-title">静炎ブレイブハート</div>
+                                                                <div id="track-artist">上松範康</div>
+                                                        </span>
+
+                                                        <div class="track-options" onclick="optionsHandler(this)">
+                                                                <div class="bar1"></div>
+                                                                <div class="bar2"></div>
+                                                                <div class="bar3"></div>
+                                                                <ul class="dropdown">
+                                                                        <li>Add to another playlist</li>
+                                                                        <li>Delete from this playlist</li>
+                                                                </ul>
+                                                        </div>
+                                                        <span id="duration">4:24</span>
+                                                </li>
+                                                <li>
+                                                        <span id="track-info">
+                                                                <div id="track-title">피 땀 눈물 (Blood Sweat & Tears)</div>
+                                                                <div id="track-artist">BTS (방탄소년단)</div>
+                                                        </span>
+
+                                                        <div class="track-options" onclick="optionsHandler(this)">
+                                                                <div class="bar1"></div>
+                                                                <div class="bar2"></div>
+                                                                <div class="bar3"></div>
+                                                                <ul class="dropdown">
+                                                                        <li>Add to another playlist</li>
+                                                                        <li>Delete from this playlist</li>
+                                                                </ul>
+                                                        </div>
+                                                        <span id="duration">6:04</span>
+                                                </li>
+                                                <li>
+                                                        <span id="track-info">
+                                                                <div id="track-title">ECHO</div>
+                                                                <div id="track-artist"> 丸目千熊（CV:木村昴）</div>
+                                                        </span>
+
+                                                        <div class="track-options" onclick="optionsHandler(this)">
+                                                                <div class="bar1"></div>
+                                                                <div class="bar2"></div>
+                                                                <div class="bar3"></div>
+                                                                <ul class="dropdown">
+                                                                        <li>Add to another playlist</li>
+                                                                        <li>Delete from this playlist</li>
+                                                                </ul>
+                                                        </div>
+                                                        <span id="duration">3:52</span>
+                                                </li>
+                                                <li>
+                                                        <span id="track-info">
+                                                                <div id="track-title">ECHO</div>
+                                                                <div id="track-artist"> 丸目千熊（CV:木村昴）</div>
+                                                        </span>
+
+                                                        <div class="track-options" onclick="optionsHandler(this)">
+                                                                <div class="bar1"></div>
+                                                                <div class="bar2"></div>
+                                                                <div class="bar3"></div>
+                                                                <ul class="dropdown">
+                                                                        <li>Add to another playlist</li>
+                                                                        <li>Delete from this playlist</li>
+                                                                </ul>
+                                                        </div>
+                                                        <span id="duration">3:52</span>
+                                                </li>
+                                                <li>
+                                                        <span id="track-info">
+                                                                <div id="track-title">ECHO</div>
+                                                                <div id="track-artist"> 丸目千熊（CV:木村昴）</div>
+                                                        </span>
+
+                                                        <div class="track-options" onclick="optionsHandler(this)">
+                                                                <div class="bar1"></div>
+                                                                <div class="bar2"></div>
+                                                                <div class="bar3"></div>
+                                                                <ul class="dropdown">
+                                                                        <li>Add to another playlist</li>
+                                                                        <li>Delete from this playlist</li>
+                                                                </ul>
+                                                        </div>
+                                                        <span id="duration">3:52</span>
+                                                </li>
+                                        </ul>
+                                </div>
+                        </div>
+                </div>
+
+                <div class="container">
+                        <div id="progress-bar"></div>
+                        <div class="content">
+                                <img src="http://cdn.last.fm/flatness/responsive/2/noimage/default_album_300_g4.png"
+                                        id="album-cover" />
+                                <span id="song-title">Title</span>
+                                <span id="artist-name">Artist</span>
+
+                                <span id="buttons">
+                                        <button id="previous"><img src="img/prev.png" onclick="previous()"
+                                                        width="20px" /></button>
+                                        <button id="play"><img src="img/play.png" id="playpause" onclick="playPause()"
+                                                        width="27px" /></button>
+                                        <button id="next"><img src="img/next.png" onclick="next()"
+                                                        width="20px" /></button>
+                                </span>
+
+                                <span id="current-time">
+                                        0:00
+                                </span>
+                        </div>
+                </div>
+
+                <div id="create-new-playlist" class="modal">
+                        <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <div class="create-title">Create a playlist</div>
+                                <div class="create-content">
+                                        <div style="padding-left: 15px;">Playlist name</div>
+                                        <input type="text" />
+                                        <button id="create-button">Create</button>
+                                </div>
+                        </div>
+                </div>
+                <div id="add-track" class="modal">
+                        <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <div class="create-title">Add track to another playlist</div>
+                                <div class="create-content">
+                                        <ul class="modal-list">
+                                                <li onclick="changeStatus(this)" class="option">Playlist 1</li>
+                                                <li onclick="changeStatus(this)" class="option">Playlist 2</li>
+                                                <li onclick="changeStatus(this)" class="option">Playlist 3</li>
+                                                <li onclick="changeStatus(this)" class="option">Playlist 4</li>
+                                        </ul>
+                                </div>
+                                <script>
+                                        function changeStatus(x) {
+                                                x.classList.toggle("active");
+                                        }
+                                </script>
+                        </div>
+                </div>
+                <script>
+
+                        function handleModal(modalName) {
+                                var modal = document.getElementById(modalName);
+                                var span = document.getElementsByClassName("close")[0];
+
+
+                                modal.style.display = "block";
+
+
+                                span.onclick = function () {
+                                        modal.style.display = "none";
+                                }
+
+                                window.onclick = function (event) {
+                                        if (event.target == modal) {
+                                                modal.style.display = "none";
+                                                var checkedOptions = document.getElementsByClassName("active");
+                                                for (var i = 0; i < checkedOptions.length; ++i) {
+                                                        checkedOptions[i].classList.toggle("active");
+                                                }
+                                        }
+                                }
+                        }
+
+                </script>
+
+        </div>
+
+
+        <script>
+                function deleteSong(position) {
+                        var elem = document.getElementById("tracks").getElementsByClassName("li");
+                        elem[position].style.display = "none";
+                }
+        </script>
+</body>
+
+</html>

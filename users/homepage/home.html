@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<header>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link href="layout.css" rel="stylesheet" />
+    <link href="music-player.css" rel="stylesheet" />
+    <link href="playlist.css" rel="stylesheet" />
+    <script src="music-player.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</header>
+
+<body>
+    <div class="home">
+        <div class="navigation-bar">
+            <img src="img/logo.png" id="logo" />
+            <ul class="navigation">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="../../guests/log-in.html">Log Out</a></li>
+            </ul>
+
+            <div class="playlists-dir">
+                <div class="play-title">My Playlists</div>
+                <a href="playlist.html">playlist 1</a>
+                <a href="playlist.html">playlist 2</a>
+                <a href="playlist.html">playlist 3</a>
+                <button onclick="handleModal('create-new-playlist')" id="myBtn">create a playlist</button>
+
+            </div>
+
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="create-title">Create a playlist</div>
+                <div class="create-content">
+                    <div style="padding-left: 15px;">Playlist name</div>
+                    <input type="text" />
+                    <button id="create-button">Create</button>
+                </div>
+            </div>
+            <script>
+                // Get the modal
+                var modal = document.getElementById('myModal');
+
+                // Get the button that opens the modal
+                var btn = document.getElementById("myBtn");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal 
+                btn.onclick = function () {
+                    modal.style.display = "block";
+                }
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
+        </div>
+
+        <div class="page">
+
+            <div class="ad-section">
+                <div class="advert">Advertisement</div>
+            </div>
+
+            <div class="content">
+                <div id="descr">Music you might like...</div>
+                <div id="playlists">
+                    <a href="playlist.html" id="thumbnail">
+                        <div id="title">Playlist name</div>
+                        <div id="song-count">123 songs</div>
+                    </a>
+                    <a href="playlist.html" id="thumbnail">
+                        <div id="title">Playlist name</div>
+                        <div id="song-count">123 songs</div>
+                    </a>
+
+                    <a href="playlist.html" id="thumbnail">
+                        <div id="title">Playlist name</div>
+                        <div id="song-count">123 songs</div>
+                    </a>
+                    <a href="playlist.html" id="thumbnail">
+                        <div id="title">Playlist name</div>
+                        <div id="song-count">123 songs</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="progress-bar"></div>
+            <div class="content">
+                <img src="http://cdn.last.fm/flatness/responsive/2/noimage/default_album_300_g4.png" id="album-cover" />
+                <span id="song-title">Title</span>
+                <span id="artist-name">Artist</span>
+
+                <span id="buttons">
+                    <button id="previous"><img src="img/prev.png" onclick="previous()" width="20px" /></button>
+                    <button id="play"><img src="img/play.png" id="playpause" onclick="playPause()"
+                            width="27px" /></button>
+                    <button id="next"><img src="img/next.png" onclick="next()" width="20px" /></button>
+                </span>
+
+                <span id="current-time">
+                    0:00
+                </span>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

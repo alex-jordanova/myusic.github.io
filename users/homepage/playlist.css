@@ -1,0 +1,114 @@
+@font-face {
+    font-family: "HK Grotesk";
+    src: url("fonts/hk-grotesk.regular.ttf");
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */ /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+  /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    z-index: 99;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    text-transform: uppercase;
+    color: #174847;
+    font-family: 'HK Grotesk';
+    border-radius: 20px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 38px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .create-title {
+      font-size: 35px;
+      margin-bottom: 30px;
+  }
+
+  .create-content {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .create-content input {
+      width: 97%;
+      background-color: #174847;
+      border-radius: 20px;
+      height: 30px;
+      color: #fff;
+      padding-left: 20px;
+      border: 0px;
+      outline: none;
+  }
+
+  #create-button {
+      margin-top: 60px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 10px;
+      text-align: center;
+      text-transform: uppercase;
+      background-color: #2a7c7b;
+      color: #fff;
+      height: 40px;
+      text-align: center;
+      border-radius: 20px;
+      width: 150px;
+      transition: background-color 300ms linear;
+      cursor: pointer;
+  }
+
+  #modal-button:hover {
+    background-color: #349997;
+}
+
+.modal-list {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.modal-list li {
+  width: 90;
+  padding: 5px 5px;
+  margin: 10px 0px;
+}
+
+.active {
+   background-color: #349997;
+   color: #fff;
+}
+
+
+.modal-list li:hover {
+  cursor: pointer;
+  background-color: #349997;
+  color: #fff;
+}

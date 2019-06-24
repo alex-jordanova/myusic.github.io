@@ -1,0 +1,333 @@
+@font-face {
+    font-family: "Kiona";
+    src: url('fonts/Kiona-Regular.ttf');
+}
+
+@font-face {
+    font-family: "HK Grotesk";
+    src: url("fonts/hk-grotesk.regular.ttf");
+}
+
+html, body {
+    background-color: #194f4e;
+    font-family: 'HK Grotesk';
+    color: #fff;
+}
+
+.navigation-bar {
+    display: flexbox;
+    position: fixed;
+    flex-flow: column;
+    width: 20%;
+    height: 85%;
+    background-color: #174847;
+    margin: -8px 0px 0px -8px;
+    z-index: 0;
+}
+
+#logo {
+    display: block;
+    height: 60px;
+    margin: 30px auto;
+}
+
+#icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 60%;
+    vertical-align: middle;
+}
+
+#username {
+    padding: 3px 7px 3px 7px;
+    background-color: #eff2f2;
+    margin-right: 30%;
+    color: #194f4e;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 20px;
+}
+.playlists-dir {
+    margin-top: 10px;
+    padding-left: 5%;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.play-title {
+   border-left: 3px solid #fff;
+   padding-left: 2%;
+}
+
+.playlists-dir a, .playlists-dir button, .navigation li a  {
+    width: inherit;
+    font-family: "HK Grotesk";
+    margin: 5% 0% 5% 3%;
+    color: #fff;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+    font-size: 19px;
+    transition: background-color ease-in-out 400ms, color ease-in-out 400ms;
+    cursor: pointer;
+    
+}
+
+.playlists-dir button {
+    margin: 0px auto;
+    padding: 2px 5px;
+    background-color: #476D6C;
+    border-radius: 20px;
+}
+
+.playlists-dir a:hover, .playlists-dir button:hover, .navigation li a:hover {
+    background-color: #fff;
+    color: #174847;
+}
+
+.navigation li {
+    width: inherit;
+    margin: 5px;
+}
+
+.navigation li a {
+    margin: 10px auto;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 70;
+}
+
+.navigation {
+    width: 98.5%;
+    list-style-type: none;
+    margin-left: -8px;
+    padding: 0 5%;
+}
+
+
+
+.page {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    left: 20%;
+    z-index: 0;
+}
+
+.search-bar {
+    width: 100%;
+}
+
+.search-bar input {
+    margin-top: -8px;
+    width: 97.3%;
+    height: 80px;
+    background-color: #0d2c2b;
+    color: #fff;
+    border: none;
+    padding-left: 30px;
+    font-size: 40px;
+}
+
+.search-bar input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: #fff;
+    opacity: 0.8;
+}
+
+.ad-section {
+    width: 85%;
+    height: 70px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.advert {
+    width: 85%;
+    height: 70px;
+    background-color: #f2f2f2;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 70px;
+    color: #194f4e;
+}
+
+.content {
+    display: block;
+    width: 94%;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+.content #descr {
+    width: 80%;
+    margin: 3%;
+    border-left: 3px solid #fff;
+    padding-left: 1%;
+    font-size: 30px;
+}
+
+.content #playlist-name {
+    font-size: 40px;
+}
+
+.content #playlists {
+    margin: 2% auto;
+    width: inherit;
+}
+
+.content #playlist-information {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    width: 18%;
+}
+
+.content #playlist-information #song-count {
+    display: block;
+    margin: 3px auto;
+    font-size: 14px;
+}
+
+.content #tracks {
+    display: inline-block;
+    width: 77%;
+    margin-left: 2px;
+    list-style-type: none;
+    vertical-align: top;
+    text-transform: none;
+}
+
+.content #tracks li {
+    display: flexbox;
+    padding: 5px 10px;
+    margin:10px 0px 10px 10px;
+    transition: background-color ease-in-out 400ms, color ease-in-out 400ms;
+}
+
+.content #tracks li #track-info {
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.content #tracks li:hover {
+    background-color: #fff;
+    color: #174847;
+    cursor: pointer;
+}
+
+
+.content #tracks li #track-artist {
+    font-size: 13px;
+    opacity: 0.7;
+    align-self: center;
+}
+
+.content #tracks li #duration {
+    display: block;
+    float: right;
+}
+
+.content #play-playlist {
+    display: flexbox;
+    align-self: center;
+    width: 60%;
+    margin-top: 15px;
+    padding: 10px 0px;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #0d2c2b;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+#thumbnail {
+    display: inline-block;
+    background-color: #eff2f2;
+    background-image: url('img/playlist.jpg');
+    background-size: 220px;
+    height: 220px;
+    width: 220px;
+    margin: 5px 7px 5px 7px;
+    line-height: 120px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: transparent;
+    border-radius: 20px;
+    font-size: 19px;
+
+}
+
+#thumbnail:hover {
+    background-image: none;
+    color: #194f4e;
+}
+
+#song-count {
+    font-size: 13px;
+}
+
+#listening-history #tracks {
+    width: 90%;
+}
+
+.track-options {
+    float: right;
+    position: relative;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 15px;
+    height: 1px;
+    color: inherit;
+    background-color: currentColor;
+    margin: 4px 0;
+    transition: 0.15s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-4px, 4px);
+    transform: rotate(-45deg) translate(-4px, 4px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-2px, -4px);
+    transform: rotate(45deg) translate(-2px, -4px);
+  }
+
+  .content #tracks .track-options .dropdown {
+      display: none;
+      position: absolute;
+      list-style: none;
+      width: 250px;
+      color: #245958;
+      right:0;
+      z-index: 10;
+      padding: 0;
+  }
+  
+  .content #tracks .track-options .dropdown li {
+    background-color: #f2f2f2; 
+    margin: 0px;
+    padding: 7px 3px;
+}
+
+  .content #tracks .track-options .dropdown li:hover {
+     background-color: #dce2e2;  
+}

@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "Kiona";
+    src: url('fonts/Kiona-Regular.ttf');
+}
+
+body {
+    background-color: #2d2d2f;
+}
+
+
+
+.container {
+    position: fixed;
+    top: 100%;
+    transform:translateY(-100%);
+    width: 100%;
+    height: 15%;
+    left: 0;
+    background-color: #edecf1;
+}
+
+#progress-bar{
+    width: 0%;
+    height: 10%;
+    background-color: #31918f;
+}
+
+#album-cover {
+    width: 70px;
+    height: 70px;
+    margin: 0.5% 0% 0% 3%;
+    transition: width 500ms ease-in-out, height 500ms ease-in-out;
+}
+
+#song-title {
+    position: absolute;
+    bottom: 47%;
+    font-family: 'Kiona';
+    margin-left: 1%;
+    color: #31918f;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#artist-name {
+    position: absolute;
+    bottom: 27%;
+    font-family: 'Kiona';
+    margin-left: 1%;
+    color: #425555;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#buttons {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+button {
+    outline: none;
+    border: 0px;
+    background-color: transparent;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+#current-time {
+    position: absolute;
+    left: 95%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Kiona';
+    color: #425555;
+    font-weight: bold;
+}
